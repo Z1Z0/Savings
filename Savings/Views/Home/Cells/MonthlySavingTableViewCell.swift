@@ -12,7 +12,10 @@ class MonthlySavingTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         layoutUI()
-        
+        let minHeight = 280
+        let minHeightConstraint = contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: CGFloat(minHeight))
+        minHeightConstraint.priority = UILayoutPriority(rawValue: 999)
+        minHeightConstraint.isActive = true
     }
     
     required init?(coder: NSCoder) {
@@ -32,7 +35,7 @@ class MonthlySavingTableViewCell: UITableViewCell {
             containerView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             containerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             containerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            containerView.heightAnchor.constraint(equalToConstant: 250)
+            containerView.heightAnchor.constraint(equalToConstant: 230)
         ])
     }
     
