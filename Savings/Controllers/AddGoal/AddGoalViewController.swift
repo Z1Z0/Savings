@@ -9,6 +9,9 @@ import UIKit
 
 class AddGoalViewController: UIViewController, Dismiss {
     func dismiss() {
+        view.backgroundColor = .customLightPurple()
+        mainView.addGoalButton.isHidden = true
+        mainView.dismissButton.isHidden = true
         self.dismiss(animated: true, completion: nil)
     }
     
