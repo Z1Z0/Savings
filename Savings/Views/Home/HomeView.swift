@@ -37,6 +37,7 @@ class HomeView: UIView {
         tableView.layer.cornerRadius = 50
         tableView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         tableView.register(MonthlySavingTableViewCell.self, forCellReuseIdentifier: "MonthlySavingTableViewCell")
+        tableView.register(YourGoalsTableViewCell.self, forCellReuseIdentifier: "YourGoalsTableViewCell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -84,17 +85,47 @@ class HomeView: UIView {
 }
 
 extension HomeView: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if section == 0 {
+            return 1
+        } else {
+            return 2
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MonthlySavingTableViewCell", for: indexPath) as! MonthlySavingTableViewCell
-        return cell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MonthlySavingTableViewCell", for: indexPath) as! MonthlySavingTableViewCell
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "YourGoalsTableViewCell", for: indexPath) as! YourGoalsTableViewCell
+            cell.goalLabel.text = "Buy beast PC"
+            cell.goalPrice.text = "$1500"
+            return cell
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 1 {
+            let myLabel = UILabel()
+            myLabel.frame = CGRect(x: 16, y: 0, width: self.frame.width, height: 20)
+            myLabel.font = UIFont(name: "AvenirNext-Bold", size: 24)
+            myLabel.text = "Your Goals"
+            let headerView = UIView()
+            headerView.addSubview(myLabel)
+            return headerView
+        }
+        return UIView()
     }
     
 }
