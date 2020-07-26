@@ -10,6 +10,7 @@
 		E134E2BB24CB37F6003F3EBB /* AddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E134E2BA24CB37F6003F3EBB /* AddGoalView.swift */; };
 		E134E2BD24CB3806003F3EBB /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E134E2BC24CB3806003F3EBB /* AddGoalViewController.swift */; };
 		E134E2BF24CB3FDD003F3EBB /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E134E2BE24CB3FDD003F3EBB /* CircularTransition.swift */; };
+		E161C4D824CD18F400AC05E1 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = E161C4D724CD18F400AC05E1 /* Const.swift */; };
 		E19ED4CC24CAD90000ADD227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED4CB24CAD90000ADD227 /* AppDelegate.swift */; };
 		E19ED4CE24CAD90000ADD227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED4CD24CAD90000ADD227 /* SceneDelegate.swift */; };
 		E19ED4D024CAD90000ADD227 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19ED4CF24CAD90000ADD227 /* HomeViewController.swift */; };
@@ -24,6 +25,7 @@
 		E134E2BA24CB37F6003F3EBB /* AddGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalView.swift; sourceTree = "<group>"; };
 		E134E2BC24CB3806003F3EBB /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		E134E2BE24CB3FDD003F3EBB /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
+		E161C4D724CD18F400AC05E1 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		E19ED4C824CAD90000ADD227 /* Savings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Savings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19ED4CB24CAD90000ADD227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E19ED4CD24CAD90000ADD227 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		E134E2C024CB53DD003F3EBB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E161C4D624CD18E100AC05E1 /* Constant */,
 				E134E2C124CB53E5003F3EBB /* CircularTransitionClass */,
 			);
 			path = Classes;
@@ -85,6 +88,14 @@
 				E19ED4EE24CAE17D00ADD227 /* UIColor + Ext.swift */,
 			);
 			path = UIColorExtension;
+			sourceTree = "<group>";
+		};
+		E161C4D624CD18E100AC05E1 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				E161C4D724CD18F400AC05E1 /* Const.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		E19ED4BF24CAD90000ADD227 = {
@@ -272,6 +283,7 @@
 				E19ED4CE24CAD90000ADD227 /* SceneDelegate.swift in Sources */,
 				E134E2BB24CB37F6003F3EBB /* AddGoalView.swift in Sources */,
 				E19ED4ED24CAE12600ADD227 /* MonthlySavingTableViewCell.swift in Sources */,
+				E161C4D824CD18F400AC05E1 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
