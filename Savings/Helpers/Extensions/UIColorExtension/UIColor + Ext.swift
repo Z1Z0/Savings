@@ -21,4 +21,8 @@ extension UIColor {
     class func customDarkPurple() -> UIColor {
         return #colorLiteral(red: 0.9450980392, green: 0.3725490196, blue: 0.6784313725, alpha: 1)
     }
+    
+    class func customLightGray() -> UIColor {
+        return #colorLiteral(red: 0.862745098, green: 0.862745098, blue: 0.862745098, alpha: 1)
+    }
 }
