@@ -64,6 +64,10 @@ extension CircularTransition:UIViewControllerAnimatedTransitioning {
                     presentedView.alpha = 1
                     presentedView.center = viewCenter
                     
+                    UIView.animate(withDuration: self.duration, delay: self.duration, options: .allowAnimatedContent, animations: {
+                        presentedView.backgroundColor = .customCyberGrape()
+                    }, completion: nil)
+                    
                     }, completion: { (success:Bool) in
                         transitionContext.completeTransition(success)
                 })
