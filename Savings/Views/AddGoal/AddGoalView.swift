@@ -18,7 +18,7 @@ class AddGoalView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .customCyberGrape()
+        backgroundColor = .customLightPurple()
         layoutUI()
     }
     
